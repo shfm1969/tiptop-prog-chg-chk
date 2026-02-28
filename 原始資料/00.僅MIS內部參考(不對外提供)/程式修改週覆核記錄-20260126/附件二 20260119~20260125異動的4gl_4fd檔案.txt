@@ -1,0 +1,4 @@
+8047437   44 -rwxrwx--x   1 topgp    tiptop      44127 Jan 23 10:34 /u1/topprod/topcust/cxc/4fd/axct200.4fd
+
+8049253  148 -rwxrwx--x   1 topgp    tiptop     143909 Jan 23 11:13 /u1/topprod/topcust/cxc/4gl/axct200.4gl
+7799862  496 -rwxrwx--x   1 topgp    tiptop     502215 Jan 19 17:07 /u1/topprod/topcust/cim/4gl/saimt370.4gl

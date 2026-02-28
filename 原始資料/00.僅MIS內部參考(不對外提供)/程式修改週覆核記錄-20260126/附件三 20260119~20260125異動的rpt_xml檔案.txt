@@ -1,0 +1,14 @@
+D:\aud>type 20260126_tiptop_rpt.csv
+
+D:\aud>type 20260126_topcust_rpt.csv
+
+D:\aud>pause
+請按任意鍵繼續 . . .
+
+
+D:\aud>type 20260126_tiptop_xml.csv
+
+D:\aud>type 20260126_topcust_xml.csv
+
+D:\aud>pause
+請按任意鍵繼續 . . .

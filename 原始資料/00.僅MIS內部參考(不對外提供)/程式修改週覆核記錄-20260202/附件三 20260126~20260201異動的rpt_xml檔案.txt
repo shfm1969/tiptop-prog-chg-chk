@@ -1,0 +1,18 @@
+D:\aud>type 20260202_tiptop_rpt.csv
+
+D:\aud>type 20260202_topcust_rpt.csv
+2026/1/27 上午 11:27:37 "D:\tiptop_cr\topprod\topcust\cxc\axcr200\0\axcr200_0_std.rpt"
+2026/1/27 上午 11:37:21 "D:\tiptop_cr\topprod\topcust\cxc\cxcr200\0\cxcr200_0_std_1.rpt"
+
+D:\aud>pause
+請按任意鍵繼續 . . .
+
+
+D:\aud>type 20260202_tiptop_xml.csv
+
+D:\aud>type 20260202_topcust_xml.csv
+2026/1/26 下午 05:31:22 "D:\tiptop_cr\topprod\topcust\cxc\axcr200\axcr200.xml"
+2026/1/27 上午 11:35:46 "D:\tiptop_cr\topprod\topcust\cxc\cxcr200\cxcr200.xml"
+
+D:\aud>pause
+請按任意鍵繼續 . . .

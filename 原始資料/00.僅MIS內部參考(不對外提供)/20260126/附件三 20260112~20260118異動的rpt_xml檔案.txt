@@ -1,0 +1,8 @@
+D:\aud>type 20260119_tiptop.csv
+
+D:\aud>type 20260119_topcust.csv
+2026/1/12 下午 03:03:17 "D:\tiptop_cr\topprod\topcust\cxm\cxmr170\0\cxmr170_0_std.rpt"
+2026/1/12 下午 04:49:25 "D:\tiptop_cr\topprod\topcust\cxm\cxmr175\0\cxmr175_0_std.rpt"
+
+D:\aud>pause
+請按任意鍵繼續 . . .

@@ -1,0 +1,7 @@
+D:\aud>type 20260112_tiptop.csv
+
+D:\aud>type 20260112_topcust.csv
+
+
+D:\aud>pause
+請按任意鍵繼續 . . .

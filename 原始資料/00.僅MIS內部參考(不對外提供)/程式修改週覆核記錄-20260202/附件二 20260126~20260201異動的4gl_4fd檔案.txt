@@ -1,0 +1,12 @@
+8047353    8 -rwxrwx--x   1 topgp    tiptop       6404 Jan 27 11:41 /u1/topprod/topcust/cxc/4fd/axcr200.4fd
+
+7882577  252 -rwxrwx--x   1 topgp    tiptop     252281 Jan 27 17:45 /u1/topprod/topcust/cxm/4gl/cxmt301.4gl
+7882232  584 -rwxrwx--x   1 topgp    tiptop     590956 Jan 27 17:45 /u1/topprod/topcust/cxm/4gl/axmt800.4gl
+7882929 1220 -rwxrwx--x   1 topgp    tiptop    1242649 Jan 27 17:45 /u1/topprod/topcust/cxm/4gl/saxmt400.4gl
+7881901  128 -rwxrwx--x   1 topgp    tiptop     125197 Jan 27 17:45 /u1/topprod/topcust/cxm/4gl/cxmt175.4gl
+15777936  460 -rwxrwx--x   1 topgp    tiptop     466254 Jan 29 11:42 /u1/topprod/topcust/cpm/4gl/apmt910.4gl
+7801255  176 -rwxrwx--x   1 topgp    tiptop     172547 Jan 26 11:44 /u1/topprod/topcust/cmd/4gl/amdp261.4gl
+7802227   64 -rwxrwx--x   1 topgp    tiptop      59886 Jan 26 11:22 /u1/topprod/topcust/cmd/4gl/amdp250.4gl
+8049093   32 -rwxrwx--x   1 topgp    tiptop      28938 Jan 27 11:46 /u1/topprod/topcust/cxc/4gl/axcr200.4gl
+8047553   12 -rwxrwx--x   1 topgp    tiptop      11433 Jan 27 11:41 /u1/topprod/topcust/cxc/4gl/cxcr200.4gl
+19185680  224 -rwxrwx--x   1 topgp    tiptop     224456 Jan 30 13:17 /u1/topprod/topcust/cfa/4gl/safat108.4gl

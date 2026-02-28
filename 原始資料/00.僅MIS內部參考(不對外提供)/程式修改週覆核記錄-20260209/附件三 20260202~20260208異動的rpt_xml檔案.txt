@@ -1,0 +1,18 @@
+D:\aud>type 20260209_tiptop_rpt.csv
+
+D:\aud>type 20260209_topcust_rpt.csv
+2026/2/5 下午 09:14:43 "D:\tiptop_cr\topprod\topcust\cbm\cbmr670\0\cbmr670_0_1_std.rpt"
+2026/2/5 下午 09:14:43 "D:\tiptop_cr\topprod\topcust\cbm\cbmr670\0\cbmr670_0_2_std.rpt"
+2026/2/5 下午 09:14:43 "D:\tiptop_cr\topprod\topcust\cbm\cbmr670\0\cbmr670_0_std.rpt"
+
+D:\aud>pause
+請按任意鍵繼續 . . .
+
+
+D:\aud>type 20260209_tiptop_xml.csv
+
+D:\aud>type 20260209_topcust_xml.csv
+2026/2/5 下午 09:14:43 "D:\tiptop_cr\topprod\topcust\cbm\cbmr670\cbmr670.xml"
+
+D:\aud>pause
+請按任意鍵繼續 . . .

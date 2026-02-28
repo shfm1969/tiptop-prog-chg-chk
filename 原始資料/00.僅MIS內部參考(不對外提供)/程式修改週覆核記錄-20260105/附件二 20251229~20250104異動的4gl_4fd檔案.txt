@@ -1,0 +1,3 @@
+7831627   16 -rwxrwx--x   1 topgp    tiptop      13778 Jan  2 11:32 /u1/topprod/topcust/cfa/4fd/afat1022.4fd
+
+7833438  224 -rwxrwx--x   1 topgp    tiptop     224301 Jan  2 14:03 /u1/topprod/topcust/cfa/4gl/afat102.4gl
