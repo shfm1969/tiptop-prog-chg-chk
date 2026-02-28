@@ -159,6 +159,19 @@ def main():
             f.write(f"程式修改紀錄稽核報告 - 產生時間: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
             f.write("="*80 + "\n\n")
 
+            # --- 輸入資料來源 ---
+            f.write("--- 輸入資料來源 ---\n")
+            input_files = [
+                ('Excel 檔案', EXCEL_PATH),
+                ('4GL/4FD 檔案清單', TXT_4GL_4FD),
+                ('RPT/XML 檔案清單', TXT_RPT_XML),
+            ]
+            for label, fpath in input_files:
+                fname = os.path.basename(fpath)
+                mtime = datetime.fromtimestamp(os.path.getmtime(fpath)).strftime('%Y-%m-%d %H:%M:%S')
+                f.write(f"  {label}: {fname} (最後修改: {mtime})\n")
+            f.write("-"*80 + "\n\n")
+
             # === (1) 檢查 *.4gl 及 *.global (精確比對) ===
             f.write("=== 檢查 (1): *.4gl / *.global 檔案 ===\n")
             f.write("規則：依修改日期比對 Excel[程式上線日]，需[程式編號]明確相同(忽略副檔名)，且[改程式]欄位為Y\n")
