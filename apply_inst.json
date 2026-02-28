@@ -1,0 +1,40 @@
+﻿{
+  "changeName": "add-technical-docs",
+  "changeDir": "D:\\AI_Study\\1.study_by_antigravity\\蝔?靽格蝝?炎?功\openspec\\changes\\add-technical-docs",
+  "schemaName": "spec-driven",
+  "contextFiles": {
+    "proposal": "D:\\AI_Study\\1.study_by_antigravity\\蝔?靽格蝝?炎?功\openspec\\changes\\add-technical-docs\\proposal.md",
+    "specs": "D:\\AI_Study\\1.study_by_antigravity\\蝔?靽格蝝?炎?功\openspec\\changes\\add-technical-docs\\specs\\**\\*.md",
+    "design": "D:\\AI_Study\\1.study_by_antigravity\\蝔?靽格蝝?炎?功\openspec\\changes\\add-technical-docs\\design.md",
+    "tasks": "D:\\AI_Study\\1.study_by_antigravity\\蝔?靽格蝝?炎?功\openspec\\changes\\add-technical-docs\\tasks.md"
+  },
+  "progress": {
+    "total": 4,
+    "complete": 0,
+    "remaining": 4
+  },
+  "tasks": [
+    {
+      "id": "1",
+      "description": "1.1 Update README.md with project overview and prerequisites",
+      "done": false
+    },
+    {
+      "id": "2",
+      "description": "1.2 Add installation instructions (`uv` commands)",
+      "done": false
+    },
+    {
+      "id": "3",
+      "description": "1.3 Add directory structure explanation",
+      "done": false
+    },
+    {
+      "id": "4",
+      "description": "1.4 Document usage instructions for `chklog.py` and `check_excel.py`",
+      "done": false
+    }
+  ],
+  "state": "ready",
+  "instruction": "Read context files, work through pending tasks, mark complete as you go.\nPause if you hit blockers or need clarification."
+}
