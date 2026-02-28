@@ -8,3 +8,6 @@ wheels/
 
 # Virtual environments
 .venv
+
+# 企業資料
+原始資料/
