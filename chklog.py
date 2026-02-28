@@ -5,10 +5,13 @@ from datetime import datetime
 import sys
 
 # 檔案路徑設定
-EXCEL_PATH = r'd:\AI_Study\1.study_by_antigravity\程式修改紀錄檢查\input_data\GP程式修改記錄.xlsx'
-TXT_4GL_4FD = r'd:\AI_Study\1.study_by_antigravity\程式修改紀錄檢查\input_data\異動的4gl_4fd檔案.txt'
-TXT_RPT_XML = r'd:\AI_Study\1.study_by_antigravity\程式修改紀錄檢查\input_data\異動的rpt_xml檔案.txt'
-OUTPUT_DIR = r'd:\AI_Study\1.study_by_antigravity\程式修改紀錄檢查\output_data'
+# 動態取得專案根目錄 (即本腳本所在的資料夾)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+EXCEL_PATH = os.path.join(BASE_DIR, 'input_data', 'GP程式修改記錄.xlsx')
+TXT_4GL_4FD = os.path.join(BASE_DIR, 'input_data', '異動的4gl_4fd檔案.txt')
+TXT_RPT_XML = os.path.join(BASE_DIR, 'input_data', '異動的rpt_xml檔案.txt')
+OUTPUT_DIR = os.path.join(BASE_DIR, 'output_data')
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
