@@ -177,6 +177,7 @@ def main():
             f.write("=== 檢查 (1): *.4gl / *.global 檔案 ===\n")
             f.write("規則：依修改日期比對 Excel[程式上線日]，需[程式編號]明確相同(忽略副檔名)，且[改程式]欄位為Y\n")
             f.write("-" * 60 + "\n")
+            matched_1 = []
             missing_1 = []
             for item in list_4gl_4fd:
                 fname = item['filename'].lower()
@@ -186,21 +187,28 @@ def main():
                     base_name = os.path.splitext(fname)[0] 
                     
                     found = False
-                    for _, row in df_excel.iterrows():
+                    for idx, row in df_excel.iterrows():
                         ex_code = str(row['程式編號_lower'])
                         ex_date = row['上線日期_str']
                         chk = is_checked(row.get(col_chk_prog, ''))
                         
                         if ex_code == base_name and ex_date == f_date and chk:
                             found = True
+                            excel_row = idx + 3
+                            matched_1.append(f"[{f_date}] {item['filename']} -> [Row{excel_row}][{row[col_prog]}],{ex_date}")
                             break
                     
                     if not found:
                         missing_1.append(f"[{f_date}] {fname} -> 異常! Excel 中找不到明確相同的[程式編號]，或修改日期不同，或[改程式]未標示Y")
-                        
-            if not missing_1: f.write("=> 全部符合！\n")
-            else:
-                for m in missing_1: f.write(m + "\n")
+
+            if matched_1:
+                f.write("比對成功:\n")
+                for m in matched_1: f.write(f"  {m}\n")
+            if missing_1:
+                f.write("比對異常:\n")
+                for m in missing_1: f.write(f"  {m}\n")
+            if not matched_1 and not missing_1:
+                f.write("=> 無資料\n")
             f.write("\n")
 
 
@@ -208,6 +216,7 @@ def main():
             f.write("=== 檢查 (2): *.4fd 檔案 ===\n")
             f.write("規則：依修改日期比對 Excel[程式上線日]，需[程式編號]透過規則包含在內，且[改畫面]欄位為Y\n")
             f.write("-" * 60 + "\n")
+            matched_2 = []
             missing_2 = []
             for item in list_4gl_4fd:
                 fname = item['filename'].lower()
@@ -216,7 +225,7 @@ def main():
                 if fname.endswith('.4fd'):
                     base_name = os.path.splitext(fname)[0]
                     found = False
-                    for _, row in df_excel.iterrows():
+                    for idx, row in df_excel.iterrows():
                         ex_code = str(row['程式編號_lower'])
                         ex_date = row['上線日期_str']
                         chk = is_checked(row.get(col_chk_ui, ''))
@@ -224,14 +233,21 @@ def main():
                         if is_similar_prog_id(ex_code, base_name):
                             if ex_date == f_date and chk:
                                 found = True
+                                excel_row = idx + 3
+                                matched_2.append(f"[{f_date}] {item['filename']} -> [Row{excel_row}][{row[col_prog]}],{ex_date}")
                                 break
                     
                     if not found:
-                         missing_2.append(f"[{f_date}] {fname} -> 異常! Excel 中找不到類似的[程式編號]，或修改日期不同，或[改畫面]未標示Y")
+                        missing_2.append(f"[{f_date}] {fname} -> 異常! Excel 中找不到類似的[程式編號]，或修改日期不同，或[改畫面]未標示Y")
 
-            if not missing_2: f.write("=> 全部符合！\n")
-            else:
-                for m in missing_2: f.write(m + "\n")
+            if matched_2:
+                f.write("比對成功:\n")
+                for m in matched_2: f.write(f"  {m}\n")
+            if missing_2:
+                f.write("比對異常:\n")
+                for m in missing_2: f.write(f"  {m}\n")
+            if not matched_2 and not missing_2:
+                f.write("=> 無資料\n")
             f.write("\n")
 
 
@@ -239,6 +255,7 @@ def main():
             f.write("=== 檢查 (3): *.rpt 檔案 ===\n")
             f.write("規則：依修改日期比對 Excel[程式上線日]，需[程式編號]透過規則包含在內，且[改rpt]欄位為Y\n")
             f.write("-" * 60 + "\n")
+            matched_3 = []
             missing_3 = []
             for item in list_rpt_xml:
                 fname = item['filename'].lower()
@@ -247,7 +264,7 @@ def main():
                 if fname.endswith('.rpt'):
                     base_name = os.path.splitext(fname)[0]
                     found = False
-                    for _, row in df_excel.iterrows():
+                    for idx, row in df_excel.iterrows():
                         ex_code = str(row['程式編號_lower'])
                         ex_date = row['上線日期_str']
                         chk = is_checked(row.get(col_chk_rpt, ''))
@@ -255,13 +272,20 @@ def main():
                         if is_similar_prog_id(ex_code, base_name):
                             if ex_date == f_date and chk:
                                 found = True
+                                excel_row = idx + 3
+                                matched_3.append(f"[{f_date}] {item['filename']} -> [Row{excel_row}][{row[col_prog]}],{ex_date}")
                                 break
                     if not found:
                         missing_3.append(f"[{f_date}] {fname} -> 異常! Excel 中找不到類似的[程式編號]，或修改日期不同，或[改rpt]未標示Y")
 
-            if not missing_3: f.write("=> 全部符合！\n")
-            else:
-                for m in missing_3: f.write(m + "\n")
+            if matched_3:
+                f.write("比對成功:\n")
+                for m in matched_3: f.write(f"  {m}\n")
+            if missing_3:
+                f.write("比對異常:\n")
+                for m in missing_3: f.write(f"  {m}\n")
+            if not matched_3 and not missing_3:
+                f.write("=> 無資料\n")
             f.write("\n")
 
 
@@ -269,6 +293,7 @@ def main():
             f.write("=== 檢查 (4): *.xml 檔案 ===\n")
             f.write("規則：依修改日期比對 Excel[程式上線日]，需[程式編號]透過規則包含在內，且[改xml]欄位為Y\n")
             f.write("-" * 60 + "\n")
+            matched_4 = []
             missing_4 = []
             for item in list_rpt_xml:
                 fname = item['filename'].lower()
@@ -277,7 +302,7 @@ def main():
                 if fname.endswith('.xml'):
                     base_name = os.path.splitext(fname)[0]
                     found = False
-                    for _, row in df_excel.iterrows():
+                    for idx, row in df_excel.iterrows():
                         ex_code = str(row['程式編號_lower'])
                         ex_date = row['上線日期_str']
                         chk = is_checked(row.get(col_chk_xml, ''))
@@ -285,13 +310,20 @@ def main():
                         if is_similar_prog_id(ex_code, base_name):
                             if ex_date == f_date and chk:
                                 found = True
+                                excel_row = idx + 3
+                                matched_4.append(f"[{f_date}] {item['filename']} -> [Row{excel_row}][{row[col_prog]}],{ex_date}")
                                 break
                     if not found:
                         missing_4.append(f"[{f_date}] {fname} -> 異常! Excel 中找不到類似的[程式編號]，或修改日期不同，或[改xml]未標示Y")
 
-            if not missing_4: f.write("=> 全部符合！\n")
-            else:
-                for m in missing_4: f.write(m + "\n")
+            if matched_4:
+                f.write("比對成功:\n")
+                for m in matched_4: f.write(f"  {m}\n")
+            if missing_4:
+                f.write("比對異常:\n")
+                for m in missing_4: f.write(f"  {m}\n")
+            if not matched_4 and not missing_4:
+                f.write("=> 無資料\n")
             f.write("\n")
 
         print(f"稽核完成！報告已儲存至: {out_file}")
