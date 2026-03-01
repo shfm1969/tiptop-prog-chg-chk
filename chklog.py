@@ -50,7 +50,7 @@ def parse_ls_l_txt(filepath):
 
 def parse_simple_txt(filepath):
     results = []
-    date_pattern = re.compile(r'(20\d{2})[-/](0[1-9]|1[0-2])[-/](0[1-9]|[12]\d|3[01])')
+    date_pattern = re.compile(r'(20\d{2})[-/](\d{1,2})[-/](\d{1,2})')
     with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
         for line in f:
             line = line.strip()
@@ -59,14 +59,15 @@ def parse_simple_txt(filepath):
             fname = ""
             parts = re.split(r'[\s,]+', line)
             for p in parts:
-                if p.lower().endswith('.rpt') or p.lower().endswith('.xml'):
-                    fname = os.path.basename(p)
+                p_clean = p.strip('\"\'')
+                if p_clean.lower().endswith('.rpt') or p_clean.lower().endswith('.xml'):
+                    fname = os.path.basename(p_clean)
                     break
             if not fname: continue
             date_match = date_pattern.search(line)
             date_str = ""
             if date_match:
-                date_str = f"{date_match.group(1)}-{date_match.group(2)}-{date_match.group(3)}"
+                date_str = f"{date_match.group(1)}-{int(date_match.group(2)):02d}-{int(date_match.group(3)):02d}"
             else:
                 perm_idx = -1
                 for i, p in enumerate(parts):
