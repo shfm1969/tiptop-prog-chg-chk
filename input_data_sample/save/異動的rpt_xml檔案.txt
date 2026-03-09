@@ -1,0 +1,17 @@
+2026/2/5 下午 09:14:43 "D:\tiptop_cr\topprod\topcust\cbm\cbmr670\0\cbmr670_0_1_std.rpt"
+2026/2/5 下午 09:14:43 "D:\tiptop_cr\topprod\topcust\cbm\cbmr670\0\cbmr670_0_2_std.rpt"
+2026/2/5 下午 09:14:43 "D:\tiptop_cr\topprod\topcust\cbm\cbmr670\0\cbmr670_0_std.rpt"
+2026/2/5 下午 09:14:43 "D:\tiptop_cr\topprod\topcust\cbm\cbmr670\cbmr670.xml"
+
+
+2026/1/27 上午 11:27:37 "D:\tiptop_cr\topprod\topcust\cxc\axcr200\0\axcr200_0_std.rpt"
+2026/1/27 上午 11:37:21 "D:\tiptop_cr\topprod\topcust\cxc\cxcr200\0\cxcr200_0_std_1.rpt"
+
+2026/1/26 下午 05:31:22 "D:\tiptop_cr\topprod\topcust\cxc\axcr200\axcr200.xml"
+2026/1/27 上午 11:35:46 "D:\tiptop_cr\topprod\topcust\cxc\cxcr200\cxcr200.xml"
+
+
+2026/1/12 下午 03:03:17 "D:\tiptop_cr\topprod\topcust\cxm\cxmr170\0\c_cxmr170_0_std.rpt"
+2026/1/12 下午 03:03:17 "D:\tiptop_cr\topprod\topcust\cxm\cxmr170\0\cxmr170_0_std.rpt"
+2026/1/12 下午 04:49:25 "D:\tiptop_cr\topprod\topcust\cxm\cxmr175\0\cxmr175_0_std.rpt"
+
