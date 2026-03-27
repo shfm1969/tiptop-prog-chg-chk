@@ -48,17 +48,23 @@
 
 ```
 tiptop-prog-chg-chk/
+├── .agent/                 # AI Agent 專屬設定與相關腳本
 ├── chklog.py              # 主程式 — 執行完整的檢核邏輯並產出稽核報告
 ├── pyproject.toml          # 專案設定 & 相依套件定義
+├── uv.lock                 # 套件版本鎖定檔 (uv 管理)
+├── .python-version         # 指定 Python 版本
 ├── README.md
 ├── .gitignore
-├── input_data/             # 輸入資料（Excel + 系統清單文字檔）
+├── input_data/             # 輸入資料 (Excel + 系統清單文字檔) (已排除於 Git 追蹤)
 │   ├── GP程式修改記錄.xlsx
 │   ├── 異動的4gl_4fd檔案.txt
 │   └── 異動的rpt_xml檔案.txt
-├── output_data/            # 稽核報告輸出（已排除於 Git 追蹤）
+├── input_data_sample/      # 範例輸入資料
+├── output_data/            # 稽核報告輸出 (已排除於 Git 追蹤)
 ├── openspec/               # OpenSpec 變更管理紀錄與技術規格
-└── 原始資料/                # 原始來源檔案備份（已排除於 Git 追蹤）
+├── 原始資料/                # 原始來源檔案備份 (已排除於 Git 追蹤)
+├── 對話歷史.md             # 專案過程對話彙覽
+└── 對話紀錄/               # 歷史對話細節
 ```
 
 ---
