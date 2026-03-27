@@ -48,23 +48,30 @@
 
 ```
 tiptop-prog-chg-chk/
-├── .agent/                 # AI Agent 專屬設定與相關腳本
-├── chklog.py              # 主程式 — 執行完整的檢核邏輯並產出稽核報告
-├── pyproject.toml          # 專案設定 & 相依套件定義
-├── uv.lock                 # 套件版本鎖定檔 (uv 管理)
-├── .python-version         # 指定 Python 版本
-├── README.md
-├── .gitignore
-├── input_data/             # 輸入資料 (Excel + 系統清單文字檔) (已排除於 Git 追蹤)
-│   ├── GP程式修改記錄.xlsx
-│   ├── 異動的4gl_4fd檔案.txt
-│   └── 異動的rpt_xml檔案.txt
-├── input_data_sample/      # 範例輸入資料
-├── output_data/            # 稽核報告輸出 (已排除於 Git 追蹤)
-├── openspec/               # OpenSpec 變更管理紀錄與技術規格
-├── 原始資料/                # 原始來源檔案備份 (已排除於 Git 追蹤)
-├── 對話歷史.md             # 專案過程對話彙覽
-└── 對話紀錄/               # 歷史對話細節
+├── .agent/                 # AI Agent 專屬設定（OpenSpec 技能與 Workflow 腳本）
+│   ├── skills/             #   - OpenSpec 相關 Skill 定義
+│   └── workflows/          #   - 自動化 Workflow 腳本
+├── .git/                   # Git 版本控制資料（隱藏，勿手動修改）
+├── .venv/                  # uv 建立的 Python 虛擬環境（隱藏，不納入 Git 追蹤）
+├── input_data/             # 輸入資料：Excel 紀錄 + 系統清單文字檔（已排除於 Git 追蹤）
+│   ├── GP程式修改記錄.xlsx  #   - 人工維護的程式修改 Excel 紀錄
+│   ├── 異動的4gl_4fd檔案.txt #  - 系統產生的 .4gl/.global/.4fd 異動清單
+│   └── 異動的rpt_xml檔案.txt #  - 系統產生的 .rpt/.xml 異動清單
+├── input_data_sample/      # 範例輸入資料（供測試與展示用）
+├── openspec/               # OpenSpec 變更管理紀錄與技術規格文件
+│   ├── changes/            #   - 各版本變更紀錄
+│   ├── specs/              #   - 技術規格文件
+│   └── config.yaml         #   - OpenSpec 工具設定
+├── output_data/            # 稽核報告輸出目錄（已排除於 Git 追蹤）
+├── 原始資料/                # 原始來源檔案備份（已排除於 Git 追蹤）
+├── 對話紀錄/               # AI 輔助開發的歷史對話細節
+├── .gitignore              # Git 忽略規則設定檔
+├── .python-version         # 指定專案使用的 Python 版本（供 uv 讀取）
+├── chklog.py               # 主程式 — 執行完整的檢核邏輯並產出稽核報告
+├── pyproject.toml          # 專案設定與相依套件定義（PEP 517/518 標準）
+├── uv.lock                 # 套件版本鎖定檔（由 uv 自動管理）
+├── README.md               # 專案說明文件（本檔案）
+└── 對話歷史.md             # AI 輔助開發的對話紀錄彙覽
 ```
 
 ---
